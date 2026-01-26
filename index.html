@@ -56,7 +56,9 @@
     }
 
     .nav-links a {
-      margin-left: 25px;
+      margin-left: 0;
+      display: flex;
+      gap: 16px;
       text-decoration: none;
       color: var(--black);
       font-weight: 500;
@@ -77,6 +79,7 @@
     .nav-links a:hover::after {
       width: 100%;
     }
+
 
     /* HERO */
     .hero {
@@ -168,6 +171,86 @@
       font-size: 36px;
       color: var(--blue);
     }
+
+    /* WHY CHOOSE US */
+.why-choose {
+  background: var(--white);
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.why-choose h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.why-choose h2 span {
+  color: #10b981;
+}
+
+.why-choose .subtitle {
+  max-width: 650px;
+  margin: auto;
+  font-size: 16px;
+  color: #475569;
+}
+
+.why-grid {
+  max-width: 1200px;
+  margin: 70px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.why-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 35px 25px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+}
+
+.why-icon {
+  width: 55px;
+  height: 55px;
+  background: #d1fae5;
+  color: #10b981;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.why-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--black);
+}
+
+.why-card p {
+  font-size: 15px;
+  color: #475569;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .why-card {
+    text-align: center;
+  }
+
+  .why-icon {
+    margin: 0 auto 20px;
+  }
+}
+
 
     /* PROCESS */
     .process {
@@ -292,8 +375,28 @@
       margin: auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      gap: 150px;
     }
+    .contact {
+      padding: 80px 20px;
+    }
+    
+    .contact-container div {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;   
+    }
+    
+    .contact-container h2 {
+      margin-bottom: 10px;
+    }
+    
+    .contact-container p {
+      margin: 0;
+      line-height: 1.6;
+    }
+    
+    
 
     .contact-form {
       background: var(--white);
@@ -462,18 +565,22 @@
       <img src="./images/WhatsApp Image 2026-01-25 at 18.12.04.jpeg" alt="CareerMint Logo">
     </div>
     <nav class="nav-links">
-      <a href="#">For Employers</a>
-      <a href="#">For Institutions</a>
-      <a href="#services">Services</a> 
-      <a href="#">About Us</a>
+      <a href="#aboutus">About Us</a> 
     </nav>
+    <nav class="nav-links">
+      <a href="#services">Services</a> 
+    </nav>
+    <nav class="nav-links">
+      <a href="#contact">Contact</a> 
+    </nav>    
+    
   </div>
 </header>
 
 <section class="hero">
   <div class="hero-container">
     <div>
-      <span class="badge">Your Trusted Placement Partner</span>
+      <span class=>Your Trusted Placement Partner</span>
       <h1>Campus Recruitment</h1>
       <p>
         We specialize in placement outsourcing for colleges and universities.
@@ -512,6 +619,41 @@
     <div class="stat"><h3>500+</h3><p>Corporate Clients</p></div>
   </div>
 </section>
+
+<section class="why-choose" id="aboutus">
+  <h2>Why Choose <span>CareerMint</span>?</h2>
+  <p class="subtitle">
+    We're not just another recruitment agency. We're your strategic partner in
+    building world-class teams.
+  </p>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon"><i class="fa-regular fa-clock"></i></div>
+      <h4>Quick Turnaround</h4>
+      <p>We deliver results within committed timelines, ensuring your hiring needs are met promptly.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon"><i class="fa-solid fa-user-group"></i></div>
+      <h4>Dedicated Team</h4>
+      <p>Get a dedicated recruitment team that understands your requirements and company culture.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon"><i class="fa-solid fa-bullseye"></i></div>
+      <h4>Quality Focus</h4>
+      <p>Rigorous screening processes ensure you get only the most qualified candidates.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="why-icon"><i class="fa-solid fa-award"></i></div>
+      <h4>Industry Expertise</h4>
+      <p>10+ years of experience across IT, Manufacturing, BFSI, and other sectors.</p>
+    </div>
+  </div>
+</section>
+
 
 <section class="process">
   <h2 style="text-align:center;">How We Work</h2>
@@ -620,6 +762,12 @@
       <h3>Corporate Training & Consulting</h3>
       <p>Customized training and consulting solutions to enhance workforce performance and productivity.</p>
       <a href="#">→ Know More</a>
+      </div>
+      <div>
+      <img src="./images/WhatsApp Image 2026-01-26 at 14.45.20.jpeg">
+      <h3> RPO Services For Employee</h3>
+      <p> Recruitment Process Outsourcing for companies looking to hire fresh talent from colleges across India.</p>
+      <a href="#">→ Know More</a>
     </div>
   </div>
 </section>
@@ -635,7 +783,7 @@
     <p>📍 Hyderabad | Bangalore | Mumbai | Delhi</p>
   </div>
 </section> -->
-<section class="contact">
+<section class="contact" id="contact">
   <div class="contact-container">
     <div>
       <h2>Partner With Us for Better Placements</h2>
